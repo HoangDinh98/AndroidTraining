@@ -12,14 +12,10 @@ import java.util.ArrayList;
 public class Calculator extends AppCompatActivity {
 
     protected TextView screenResult;
+    protected TextView screen;
     protected Button btn;
-    protected Button btnMulti;
-    protected Button btnDiv;
-    protected Button btnAC;
-    protected Button btnPlus;
-    protected Button btnMinus;
-    protected Button btnEqual;
     protected ArrayList<Button> buttons = new ArrayList<Button>();
+    protected Calculate cal = new Calculate();
 
 
     @Override
@@ -27,6 +23,7 @@ public class Calculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
         this.screenResult = (TextView) findViewById(R.id.text_result);
+        this.screen = (TextView) findViewById(R.id.text_screen);
 
         this.getGeneralButton();
         this.getFunctionButton();
@@ -70,8 +67,8 @@ public class Calculator extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     String text = (String) buttons.get(index).getText();
-                    text = (String) screenResult.getText() + text;
-                    screenResult.setText(text);
+                    text = (String) screen.getText() + text;
+                    screen.setText(text);
                 }
             });
 
@@ -82,14 +79,18 @@ public class Calculator extends AppCompatActivity {
         this.buttons.get( this.buttons.size()-1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                screenResult.setText("Feature is coming soon!");
+//                screenResult.setText("Feature is coming soon!");
+                String expression = (String) screen.getText();
+                double results = cal.exe(expression);
+                screenResult.setText("" + results);
             }
         });
 
         this.buttons.get( this.buttons.size()-2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                screenResult.setText("");
+                screen.setText("");
+                screenResult.setText("0");
             }
         });
     }
