@@ -41,6 +41,7 @@
         android:text="0"/>
 
     <LinearLayout
+        android:id="@+id/numpad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
@@ -269,5 +270,19 @@
                 android:text="="/>
         </LinearLayout>
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numpad"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+        <Button
+            android:id="@+id/btn_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f28d00"
+            android:textColor="#FFFFFF"
+            android:text="SWITCH"/>
     </LinearLayout>
 </RelativeLayout>

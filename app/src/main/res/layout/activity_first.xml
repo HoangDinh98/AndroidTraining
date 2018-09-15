@@ -53,6 +53,7 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:id="@+id/txt_forgotpass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Forgot your password?"
@@ -61,6 +62,18 @@
             android:layout_centerHorizontal="true"
             android:textStyle="bold"
             android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btn_switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/txt_forgotpass"
+            android:layout_marginTop="50dp"
+            android:text="SWITCH"
+            android:background="#f28d00"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
 
 
 </RelativeLayout>
