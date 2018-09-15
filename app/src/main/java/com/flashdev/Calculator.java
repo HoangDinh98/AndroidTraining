@@ -30,8 +30,6 @@ public class Calculator extends AppCompatActivity {
 
         this.setGeneralButtonEvent();
         this.setFunctionButtonEvent();
-
-
     }
 
     protected void getGeneralButton() {
