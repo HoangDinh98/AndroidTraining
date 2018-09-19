@@ -28,7 +28,7 @@ public class FirstActivity extends AppCompatActivity {
         this.btn_switch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(FirstActivity.this, Calculator.class));
+                finish();
             }
         });
     }

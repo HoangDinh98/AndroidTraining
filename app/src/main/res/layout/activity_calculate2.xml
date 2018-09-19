@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030c59"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    tools:context=".FirstActivity">
+
+    <EditText
+        android:id="@+id/atv_cal2_num1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="#ffffff"
+        android:gravity="left"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="1dp"
+        android:textColor="#00c154"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:hint="Number 1"/>
+
+    <EditText
+        android:id="@+id/atv_cal2_num2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="#ffffff"
+        android:gravity="left"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="1dp"
+        android:textColor="#00c154"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:hint="Number 2"/>
+
+    <Button
+        android:id="@+id/atv_cal2_btn_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f28d00"
+        android:textSize="30dp"
+        android:text="OK"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

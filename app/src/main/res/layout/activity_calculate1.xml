@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030c59"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    tools:context=".FirstActivity">
+
+    <TextView
+        android:id="@+id/atv_cal1_text_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:background="#dadada"
+        android:gravity="left"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="1dp"
+        android:text="Result"
+        android:textColor="#00c154"
+        android:textSize="28dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/atv_cal1_text_result"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#FFFFFF"
+        android:gravity="right"
+        android:layout_marginBottom="30dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="8dp"
+        android:textColor="#00489f"
+        android:textSize="33dp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        android:text=""/>
+
+    <Button
+        android:id="@+id/atv_cal1_btn_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f28d00"
+        android:textSize="30dp"
+        android:text="CALCULATE"
+        android:textColor="#FFFFFF" />
+</LinearLayout>
