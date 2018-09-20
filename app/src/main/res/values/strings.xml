@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AndroidTraining</string>
     <string name="title_activity_login_success">LoginSuccessActivity</string>
+    <string name="title_activity_login">Login</string>
 </resources>
