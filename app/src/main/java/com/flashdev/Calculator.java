@@ -25,20 +25,12 @@ public class Calculator extends AppCompatActivity {
         setContentView(R.layout.activity_calculator);
         this.screenResult = (TextView) findViewById(R.id.text_result);
         this.screen = (TextView) findViewById(R.id.text_screen);
-        this.btn_switch = (Button) findViewById(R.id.btn_switch);
 
         this.getGeneralButton();
         this.getFunctionButton();
 
         this.setGeneralButtonEvent();
         this.setFunctionButtonEvent();
-
-        this.btn_switch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Calculator.this, FirstActivity.class));
-            }
-        });
     }
 
     protected void getGeneralButton() {

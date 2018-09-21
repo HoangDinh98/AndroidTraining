@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#030c59"
+    android:background="@drawable/bg_gradient_skyline"
     android:orientation="vertical"
     android:paddingHorizontal="20dp"
     tools:context=".FirstActivity">
@@ -25,12 +25,12 @@
     <TextView
         android:id="@+id/atv_cal1_text_result"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:gravity="right"
         android:layout_marginBottom="30dp"
         android:paddingHorizontal="10dp"
-        android:paddingVertical="8dp"
+        android:paddingVertical="10dp"
         android:textColor="#00489f"
         android:textSize="33dp"
         android:textStyle="bold"
@@ -41,7 +41,7 @@
         android:id="@+id/atv_cal1_btn_switch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#f28d00"
+        android:background="@drawable/btn_border_radius"
         android:textSize="30dp"
         android:text="CALCULATE"
         android:textColor="#FFFFFF" />

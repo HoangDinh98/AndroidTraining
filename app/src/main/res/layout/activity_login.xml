@@ -31,8 +31,10 @@
         android:paddingVertical="10dp"
         android:drawableLeft="@drawable/ic_email"
         android:background="@drawable/text_border_radius"
+        android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:hint="   Phone or Email"
+        android:hint=" Phone or Email"
+        android:text=""
         />
 
     <EditText
@@ -46,8 +48,10 @@
         android:paddingVertical="10dp"
         android:drawableLeft="@drawable/ic_lock"
         android:background="@drawable/text_border_radius"
+        android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:hint=" Password"
+        android:text=""
         />
 
     <Button

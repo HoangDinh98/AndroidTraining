@@ -24,7 +24,7 @@ public class Calculate1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent cal2 = new Intent(Calculate1.this, Calculate2.class);
-                startActivityForResult(cal2, 2);
+                startActivityForResult(cal2, Config.MANUAL_CAL_CODE);
             }
         });
     }
@@ -32,9 +32,11 @@ public class Calculate1 extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==2) {
+        if(requestCode==Config.MANUAL_CAL_CODE) {
+            int num1 = data.getIntExtra("number1", 0);
+            int num2 = data.getIntExtra("number1", 0);
             int result = data.getIntExtra("Result", 0);
-            screen.setText(result + "");
+            screen.setText(num1 + " + "+ num2 + " = " + result);
         }
     }
 }

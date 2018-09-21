@@ -33,8 +33,10 @@ public class Calculate2 extends AppCompatActivity {
                 int n2 = Integer.parseInt(num2.getText().toString());
 
                 Intent cal1 = new Intent();
+                cal1.putExtra("number1", n1);
+                cal1.putExtra("number2", n2);
                 cal1.putExtra("Result", n1 + n2);
-                setResult(2, cal1);
+                setResult(Config.MANUAL_CAL_CODE, cal1);
                 finish();
             }
         });

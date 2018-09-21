@@ -1,5 +1,6 @@
 package com.flashdev;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
@@ -11,13 +12,14 @@ import android.widget.Toast;
 public class Login extends Activity {
     protected EditText email, password;
     protected Button btnLogin;
-    protected String error;
+    protected String error = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         this.config();
+        this.setAction();
     }
 
     protected void config() {
@@ -32,32 +34,34 @@ public class Login extends Activity {
             public void onClick(View v) {
                 checkInfo();
 
-                if(error != "") {
+                if (!error.equals("")) {
                     Toast.makeText(Login.this, error, Toast.LENGTH_SHORT).show();
                     return;
                 }
 
+                Intent home = new Intent(Login.this, Home.class);
+                home.putExtra("userName", email.getText().toString());
+                startActivity(home);
             }
         });
     }
 
     protected void checkInfo() {
-        String strEmail = email.getText().toString();
-        String strPassword = password.getText().toString();
+        String strEmail = this.email.getText().toString();
+        String strPassword = this.password.getText().toString();
 
-        if (strEmail != "admin") {
+        if (!strEmail.equals("admin")) {
             this.error = "Email or Password incorect!";
             return;
         }
 
-        if (strPassword != "admin") {
+        if (!strPassword.equals("admin")) {
             this.error = "Password incorect!";
             return;
         }
 
         this.error = "";
     }
-
 
 
 }
