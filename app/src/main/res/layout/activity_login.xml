@@ -10,27 +10,19 @@
     android:paddingHorizontal="20dp"
     android:background="@drawable/bg_gradient_skyline">
 
-    <ImageView
-        android:id="@+id/myImage"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-
-        android:padding="1dp"
-        android:scaleType="centerCrop"
-        android:cropToPadding="true"
-        android:src="@drawable/WingsLogoG5"
-        android:background="@drawable/logo_border_radius" />
-
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/img_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@drawable/wings_logo_2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="30dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:civ_border_width="4dp"
+        app:civ_border_color="#fcb503"/>
 
     <EditText
-        android:id="@+id/edit_phone"
+        android:id="@+id/act_log_edit_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/img_logo"
@@ -44,11 +36,11 @@
         />
 
     <EditText
-        android:id="@+id/edit_password"
+        android:id="@+id/act_log_edit_password"
         android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edit_phone"
+        android:layout_below="@id/act_log_edit_phone"
         android:layout_marginTop="20dp"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
@@ -59,39 +51,41 @@
         />
 
     <Button
-        android:id="@+id/btn_login"
-        android:layout_width="match_parent"
+        android:id="@+id/act_log_btn_login"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edit_password"
-        android:layout_marginTop="20dp"
-        android:text="Log in"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/act_log_edit_password"
+        android:layout_marginTop="40dp"
         android:background="@drawable/btn_border_radius"
         android:textColor="#FFFFFF"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:text="Log in"/>
 
     <TextView
         android:id="@+id/txt_forgotpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot your password?"
-        android:layout_below="@id/btn_login"
+        android:layout_below="@id/act_log_btn_login"
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:textColor="#FFFFFF"/>
 
-    <Button
-        android:id="@+id/btn_switch2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/txt_forgotpass"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/btn_border_radius_2"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:text="SWITCH"
-        />
+    <!--<Button-->
+        <!--android:id="@+id/btn_switch2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_below="@id/txt_forgotpass"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:background="@drawable/btn_border_radius_2"-->
+        <!--android:textColor="#FFFFFF"-->
+        <!--android:textStyle="bold"-->
+        <!--android:text="SWITCH"-->
+        <!--/>-->
 
 
 </RelativeLayout>
