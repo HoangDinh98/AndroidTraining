@@ -27,6 +27,7 @@
         <activity android:name=".Calculate1" />
         <activity android:name=".Calculate2" />
         <activity android:name=".Home"></activity>
+        <activity android:name=".ListViewDemo"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/listview_fruit_avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pokemon_01"/>
+    <TextView
+        android:id="@+id/listview_fruit_tilte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/listview_fruit_avatar"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#fd3943"
+        android:text="Title"/>
+
+    <TextView
+        android:id="@+id/listview_fruit_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/listview_fruit_avatar"
+        android:layout_below="@id/listview_fruit_tilte"
+        android:layout_marginLeft="20dp"
+        android:textSize="15dp"
+        android:textColor="#c2ccff"
+        android:text="Content"/>
+</RelativeLayout>

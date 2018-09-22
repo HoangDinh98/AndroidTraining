@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
-    protected Button btnCalculator, btnManualCal;
+    protected Button btnCalculator, btnManualCal, btnListView;
     protected TextView txtWelcome;
 
     @Override
@@ -24,6 +24,7 @@ public class Home extends AppCompatActivity {
     protected void config() {
         this.btnCalculator = (Button) findViewById(R.id.act_home_btn_calculator);
         this.btnManualCal = (Button) findViewById(R.id.act_home_btn_manual_cal);
+        this.btnListView = (Button) findViewById(R.id.act_home_btn_listview);
         this.txtWelcome = (TextView) findViewById(R.id.act_home_text_welcome);
     }
 
@@ -50,6 +51,14 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 Intent manualCal = new Intent(Home.this, Calculate1.class);
                 startActivity(manualCal);
+            }
+        });
+
+        this.btnListView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent listViewDemo = new Intent(Home.this, ListViewDemo.class);
+                startActivity(listViewDemo);
             }
         });
     }

@@ -34,7 +34,7 @@ public class Calculate1 extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==Config.MANUAL_CAL_CODE) {
             int num1 = data.getIntExtra("number1", 0);
-            int num2 = data.getIntExtra("number1", 0);
+            int num2 = data.getIntExtra("number2", 0);
             int result = data.getIntExtra("Result", 0);
             screen.setText(num1 + " + "+ num2 + " = " + result);
         }
