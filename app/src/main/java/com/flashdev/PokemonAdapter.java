@@ -37,7 +37,7 @@ public class PokemonAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(this.currentContext);
-        View view = inflater.inflate(R.layout.listview_fruit, null);
+        View view = inflater.inflate(R.layout.listview_pokemon, null);
         TextView title = (TextView) view.findViewById(R.id.listview_fruit_tilte);
         TextView content = (TextView) view.findViewById(R.id.listview_fruit_content);
         ImageView imgv = (ImageView) view.findViewById(R.id.listview_fruit_avatar);

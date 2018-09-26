@@ -73,5 +73,18 @@
         android:textSize="25dp"
         android:textStyle="bold" />
 
+    <Button
+        android:id="@+id/act_home_btn_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/act_home_btn_listview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_border_radius"
+        android:text="RECYCLER VIEW"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>

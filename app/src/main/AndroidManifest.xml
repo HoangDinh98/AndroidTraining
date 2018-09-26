@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--<activity-->
-        <!--android:name=".LoginSuccessActivity"-->
-        <!--android:label="@string/title_activity_login_success"-->
-        <!--android:theme="@style/AppTheme.NoActionBar" />-->
+
+        <!-- <activity -->
+        <!-- android:name=".LoginSuccessActivity" -->
+        <!-- android:label="@string/title_activity_login_success" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
 
         <activity android:name=".Calculator" />
         <activity android:name=".FirstActivity" />
@@ -21,13 +22,15 @@
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".Calculate1" />
         <activity android:name=".Calculate2" />
-        <activity android:name=".Home"></activity>
-        <activity android:name=".ListViewDemo"></activity>
+        <activity android:name=".Home" />
+        <activity android:name=".ListViewDemo" />
+        <activity android:name=".RecyclerViewDemo"></activity>
     </application>
 
 </manifest>
