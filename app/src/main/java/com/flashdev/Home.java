@@ -1,6 +1,8 @@
 package com.flashdev;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
-    protected Button btnCalculator, btnManualCal, btnListView, btnRecyclerView;
+    protected Button btnCalculator, btnManualCal, btnListView, btnRecyclerView, btnLogout;
     protected TextView txtWelcome;
 
     @Override
@@ -27,6 +29,7 @@ public class Home extends AppCompatActivity {
         this.btnManualCal = (Button) findViewById(R.id.act_home_btn_manual_cal);
         this.btnListView = (Button) findViewById(R.id.act_home_btn_listview);
         this.btnRecyclerView = (Button) findViewById(R.id.act_home_btn_recyclerview);
+        this.btnLogout = (Button) findViewById(R.id.act_home_btn_logout);
         this.txtWelcome = (TextView) findViewById(R.id.act_home_text_welcome);
     }
 
@@ -71,5 +74,24 @@ public class Home extends AppCompatActivity {
                 startActivity(recyclerViewDemo);
             }
         });
+
+        this.btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logout();
+            }
+        });
+    }
+
+    private void logout() {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("AndroidTraining",
+                Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.clear();
+        editor.commit();
+
+        Intent login = new Intent(Home.this, Login.class);
+        startActivity(login);
+        finish();
     }
 }

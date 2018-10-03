@@ -1,6 +1,8 @@
 package com.flashdev;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
@@ -13,12 +15,20 @@ public class Login extends Activity {
     protected EditText email, password;
     protected Button btnLogin;
     protected String error = "";
+    private String storageUserName = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         this.config();
+
+        if (this.checkLogin()) {
+            Intent home = new Intent(Login.this, Home.class);
+            home.putExtra("userName", this.storageUserName);
+            startActivity(home);
+        }
+
         this.setAction();
     }
 
@@ -38,6 +48,12 @@ public class Login extends Activity {
                     Toast.makeText(Login.this, error, Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+                SharedPreferences pref = getApplicationContext().getSharedPreferences("AndroidTraining",
+                        Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = pref.edit();
+                editor.putString("userName", email.getText().toString());
+                editor.commit();
 
                 Intent home = new Intent(Login.this, Home.class);
                 home.putExtra("userName", email.getText().toString());
@@ -61,6 +77,17 @@ public class Login extends Activity {
         }
 
         this.error = "";
+    }
+
+    private boolean checkLogin() {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("AndroidTraining",
+                Context.MODE_PRIVATE);
+        this.storageUserName = pref.getString("userName", "");
+
+
+        if (this.storageUserName.equals("")) return false;
+
+        return true;
     }
 
 
