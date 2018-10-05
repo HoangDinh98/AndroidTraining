@@ -11,7 +11,7 @@ import android.widget.EditText;
 import java.util.ArrayList;
 
 public class SQLiteSimple extends Activity {
-    EditText edtUser, edtPass;
+    EditText edtName, edtEmail;
     Button btnSave, btnView;
     MyDatabase myDatabase = new MyDatabase(this,"",null,1);
 
@@ -19,15 +19,15 @@ public class SQLiteSimple extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sqlite_simple);
-        edtUser = (EditText)findViewById(R.id.activity_first_edit_username);
-        edtPass = (EditText)findViewById(R.id.activity_first_edit_password);
-        btnSave = (Button) findViewById(R.id.btn_click);
-        btnView = (Button) findViewById(R.id.btn_view);
+        edtName = (EditText)findViewById(R.id.act_sql_edit_name);
+        edtEmail = (EditText)findViewById(R.id.act_sql_edit_email);
+        btnSave = (Button) findViewById(R.id.act_sql_btn_save);
+        btnView = (Button) findViewById(R.id.act_sql_btn_view);
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myDatabase.insertUser(edtUser.getText().toString(), edtPass.getText().toString());
+                myDatabase.insertUser(edtName.getText().toString(), edtEmail.getText().toString());
             }
         });
 

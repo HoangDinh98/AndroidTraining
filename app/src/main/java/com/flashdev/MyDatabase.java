@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class MyDatabase extends SQLiteOpenHelper {
     private static String DATABASE_NAME="db.androidtraining";
     private String TABLE_NAME="users";
-    private String CREATE_TABLE = "CREATE TABLE users (username text, password text)";
+    private String CREATE_TABLE = "CREATE TABLE users (name text, email text)";
     private String DELETE_TABLE = "DROP TABLE IF EXISTS users";
 
     public MyDatabase(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -30,11 +30,11 @@ public class MyDatabase extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public  void insertUser(String name, String pass){
+    public  void insertUser(String name, String email){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("username",name);
-        values.put("password", pass);
+        values.put("name",name);
+        values.put("email", email);
         db.insert(TABLE_NAME,null,values);
     }
 
@@ -45,7 +45,7 @@ public class MyDatabase extends SQLiteOpenHelper {
 
         ArrayList<String> userlists = new ArrayList<>();
         while (cursor.moveToNext()){
-            String u = cursor.getString(cursor.getColumnIndexOrThrow("username"));
+            String u = cursor.getString(cursor.getColumnIndexOrThrow("name"));
             userlists.add(u);
         }
         return userlists;

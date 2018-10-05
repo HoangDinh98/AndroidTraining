@@ -30,7 +30,9 @@
         <activity android:name=".Calculate2" />
         <activity android:name=".Home" />
         <activity android:name=".ListViewDemo" />
-        <activity android:name=".RecyclerViewDemo"></activity>
+        <activity android:name=".RecyclerViewDemo" />
+        <activity android:name=".SQLiteSimple" />
+        <activity android:name=".ShowSQLData"></activity>
     </application>
 
 </manifest>

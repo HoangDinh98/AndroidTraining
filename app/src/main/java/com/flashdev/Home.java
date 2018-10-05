@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
-    protected Button btnCalculator, btnManualCal, btnListView, btnRecyclerView, btnLogout;
+    protected Button btnCalculator, btnManualCal, btnListView, btnRecyclerView, btnSQL, btnLogout;
     protected TextView txtWelcome;
 
     @Override
@@ -29,6 +29,7 @@ public class Home extends AppCompatActivity {
         this.btnManualCal = (Button) findViewById(R.id.act_home_btn_manual_cal);
         this.btnListView = (Button) findViewById(R.id.act_home_btn_listview);
         this.btnRecyclerView = (Button) findViewById(R.id.act_home_btn_recyclerview);
+        this.btnSQL = (Button) findViewById(R.id.act_home_btn_sqlite);
         this.btnLogout = (Button) findViewById(R.id.act_home_btn_logout);
         this.txtWelcome = (TextView) findViewById(R.id.act_home_text_welcome);
     }
@@ -72,6 +73,14 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 Intent recyclerViewDemo = new Intent(Home.this, RecyclerViewDemo.class);
                 startActivity(recyclerViewDemo);
+            }
+        });
+
+        this.btnSQL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sqlite = new Intent(Home.this, SQLiteSimple.class);
+                startActivity(sqlite);
             }
         });
 
