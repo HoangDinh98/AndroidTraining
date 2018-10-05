@@ -1,12 +1,14 @@
 package com.flashdev;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -28,15 +30,15 @@ public class SQLiteSimple extends Activity {
             @Override
             public void onClick(View view) {
                 myDatabase.insertUser(edtName.getText().toString(), edtEmail.getText().toString());
+                Toast.makeText(SQLiteSimple.this, "Saved successfully", Toast.LENGTH_SHORT).show();
             }
         });
 
         btnView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ArrayList<String> list =  myDatabase.getUsers();
-                for(int i=0;i<list.size();i++)
-                    Log.d("User", list.get(i));
+                Intent viewUserList  = new Intent(SQLiteSimple.this, ShowSQLData.class);
+                startActivity(viewUserList);
             }
         });
     }
